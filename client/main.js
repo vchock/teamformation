@@ -1,11 +1,11 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import todosList from '../imports/components/todosList/todosList';
+import userAuth from '../imports/components/userAuth/userAuth';
 import '../imports/startup/accounts-config.js';
 import 'bootstrap/dist/css/bootstrap.css';
 angular.module('simple-todos', [
   angularMeteor,
-  todosList.name,
+  userAuth.name,
     'accounts.ui'
 ]);
 

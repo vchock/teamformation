@@ -1,8 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import template from './todosList.html';
-import { Tasks, Users } from '../../api/tasks.js';
-class TodosListCtrl {
+import template from './userAuth.html';
+import { Users } from '../../api/tasks.js';
+class AuthCtrl {
     constructor($scope) {
     $scope.viewModel(this);
     this.subscribe('users');
@@ -40,10 +40,10 @@ class TodosListCtrl {
   }  
 }
  
-export default angular.module('todosList', [
+export default angular.module('userAuth', [
   angularMeteor
 ])
-  .component('todosList', {
-    templateUrl: 'imports/components/todosList/todosList.html',
-    controller: TodosListCtrl
+  .component('userAuth', {
+    templateUrl: 'imports/components/userAuth/userAuth.html',
+    controller: AuthCtrl
   });
